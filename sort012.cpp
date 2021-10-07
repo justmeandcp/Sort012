@@ -13,29 +13,23 @@ int arr[n];
 int i;
 for(i=0;i<n;i++)
     cin>>arr[i];
-int low=0,high=n-1,mid=0;
-
-while(mid<=high)
-{
-if(a[mid]==1)
-{
-    mid++;
-}
-else if(a[mid]==0)
-{
-    swap(a[mid],a[low]);
-    low++;
-    mid++;
-
-}
-else
-{
-    swap(a[mid],a[high]);
-    high--;
-}
-}
-  for(int x:arr)
-      cout<<x<<" ";
+int zero=0,one=0,two=0;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==1)
+            one++;
+        if(arr[i]==2)
+            two++;
+        if(arr[i]==0)
+            zero++;
+    }
+    for(i=1;i<=zero;i++)
+        cout<<0<<" ";
+     for(i=1;i<=one;i++)
+        cout<<0<<" ";
+     for(i=1;i<=two;i++)
+        cout<<0<<" ";
+    
    
     return 0;
 }
